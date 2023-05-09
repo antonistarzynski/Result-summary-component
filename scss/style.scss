@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//gradient 1
+$light-slate-blue: hsl(252, 100%, 67%);
+$light-royal-blue: hsl(241, 81%, 54%);
+
+//gradient 2
+$violet-blue: hsla(256, 72%, 46%, 1);
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+
+$light-red: hsl(0, 100%, 67%);
+$orange-yellow: hsl(39, 100%, 56%);
+$green-teal: hsl(166, 100%, 37%);
+$cobalt-blue: hsl(234, 85%, 45%);
+
+
+$pale-blue: hsl(221, 100%, 96%);
+$dark-gray-blue: hsl(224, 30%, 27%);
+$light-lavender: hsl(241, 100%, 89%);
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: $pale-blue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.125em;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .left-section {
+        width: 100%;
+        background: linear-gradient(180deg, $light-slate-blue 0%, $light-royal-blue 100%);
+        border-radius: 0 0 2em 2em;
+        box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+
+        h2 {
+            color: $light-lavender;
+            padding: 1em;
+        }
+
+        .scores-circle {
+            width: 8.75em;
+            height: 8.75em;
+            border-radius: 100%;
+            background: linear-gradient(180deg, $violet-blue 0%, $persian-blue 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .score-number {
+                font-size: 3.5em;
+                font-weight: 800;
+                color: white;
+            }
+
+            .score-max {
+                font-size: 1em;
+                font-weight: 700;
+                color: hsla(241, 100%, 89%, .5);
+            }
+        }
+
+        h1 {
+            color: white;
+            padding: .5em;
+        }
+
+        p {
+            color: #CAC9FF;
+            padding: 0 3em 2em 3em;
+            font-weight: 500;
+        }
+    }
+
+    .right-section {
+        text-align: justify;
+        padding: 1.25em;
+        width: 100%;
+        background-color: white;
+
+        h2 {
+            color: $dark-gray-blue;
+            width: 100%;
+            margin: .75em 0em;
+        }
+
+        .rates {
+            width: 100%;
+        }
+
+        .rate {
+            background-color: rgb(229, 229, 229);
+            border-radius: .75em;
+            height: 3.5em;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: .5em;
+            margin: .5em 0;
+            justify-content: space-between;
+
+            .left-side {
+                display: flex;
+                align-items: center;
+
+                img {
+                    padding: .5em;
+                }
+            }
+
+            .right-side {
+                display: flex;
+                justify-content: space-between;
+                width: 4em;
+
+                p {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 4em;
+                }
+
+                .rate-score {
+                    font-weight: 700;
+                    color: $dark-gray-blue;
+                }
+
+                .slash {
+                    color: hsla(224, 30%, 27%, .5);
+                }
+
+                .hundred {
+                    color: hsla(224, 30%, 27%, .5);
+                }
+            }
+
+
+        }
+
+        .rate:nth-child(1) {
+            background-color: hsla(0, 100%, 67%, .05);
+
+            .header {
+                color: $light-red;
+            }
+        }
+
+        .rate:nth-child(2) {
+            background-color: hsla(39, 100%, 56%, .05);
+
+            .header {
+                color: $orange-yellow;
+            }
+        }
+
+        .rate:nth-child(3) {
+            background-color: hsla(166, 100%, 37%, .05);
+
+            .header {
+                color: $green-teal;
+            }
+        }
+
+        .rate:nth-child(4) {
+            background-color: hsla(234, 85%, 45%, .05);
+
+            .header {
+                color: $cobalt-blue;
+            }
+        }
+
+        button {
+            margin: 1em 0;
+            border: none;
+            height: 3.5em;
+            width: 100%;
+            border-radius: 8em;
+            background-color: $dark-gray-blue;
+            color: white;
+            font-weight: 500;
+            font-size: 1.125em;
+        }
+
+        button:active {
+            background: linear-gradient(180deg, $light-slate-blue 0%, $light-royal-blue 100%);
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media (min-width: 560px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 46em;
+        height: 32em;
+        background-color: rgb(255, 255, 255);
+        border-radius: 2em;
+        box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1.125em;
+        }
+
+        .left-section {
+            border-radius: 2em;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2.375em;
+            box-shadow: none;
+
+
+            .scores-circle {
+                width: 12.5em;
+                height: 12.5em;
+
+                .score-number {
+                    font-size: 4.5em;
+                }
+
+                .score-max {
+                    font-size: 1.125em;
+                }
+            }
+
+            h2 {
+                padding: 0;
+            }
+
+            p {
+                padding: 0 1em;
+            }
+        }
+
+        .right-section {
+            height: 100%;
+            border-radius: 2em;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2.375em;
+
+
+            .rate {
+                margin-bottom: 1em;
+
+            }
+
+            button {
+                height: 3.5em;
+                margin: 0;
+            }
+        }
+    }
+}
